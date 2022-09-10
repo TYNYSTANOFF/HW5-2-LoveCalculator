@@ -1,4 +1,4 @@
-package com.example.lovecalculate.network
+package com.example.lovecalculate.network.helpers
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -8,7 +8,7 @@ class RetrofitService {
         .baseUrl("https://love-calculator.p.rapidapi.com/")
         .addConverterFactory(GsonConverterFactory.create()).build()
 
-    fun getApi():LoveApi{
+    fun getApi(): LoveApi {
         return retrofit.create(LoveApi::class.java)
     }
 }

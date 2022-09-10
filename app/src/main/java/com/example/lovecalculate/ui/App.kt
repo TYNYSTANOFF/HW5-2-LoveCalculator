@@ -1,8 +1,8 @@
-package com.example.lovecalculate
+package com.example.lovecalculate.ui
 
 import android.app.Application
-import com.example.lovecalculate.network.LoveApi
-import com.example.lovecalculate.network.RetrofitService
+import com.example.lovecalculate.network.helpers.LoveApi
+import com.example.lovecalculate.network.helpers.RetrofitService
 
 class App : Application() {
     companion object {

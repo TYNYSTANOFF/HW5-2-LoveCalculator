@@ -1,4 +1,4 @@
-package com.example.lovecalculate.network
+package com.example.lovecalculate.network.helpers
 
 import com.example.lovecalculate.network.model.LoveModel
 import retrofit2.Call
