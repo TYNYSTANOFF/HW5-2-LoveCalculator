@@ -2,14 +2,20 @@ package com.example.lovecalculate.board
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.lovecalculate.Prefs
 import com.example.lovecalculate.R
 import com.example.lovecalculate.databinding.ItemBoardBinding
+import javax.inject.Inject
 
 class BoardAdapter(val context: Context, val navController: NavController) : RecyclerView.Adapter<BoardAdapter.BoardViewHolder>() {
+   @Inject
+   private lateinit var prefs :Prefs
+
     private val text = arrayListOf(
         "Тебе одиноко?",
         "Тебе грустно?",
@@ -42,7 +48,12 @@ class BoardAdapter(val context: Context, val navController: NavController) : Rec
         fun bind(position: Int) {
             binding.tvText.text = text[position]
             binding.imageView.setAnimation(ImageView[position])
-
         }
     }
 }
+
+
+
+
+
+

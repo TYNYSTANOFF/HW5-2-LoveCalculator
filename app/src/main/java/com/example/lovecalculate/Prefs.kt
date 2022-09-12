@@ -22,7 +22,7 @@ class Prefs (context: Context) {
         return preference.getString("name", null)
     }
 
-    fun saveImageViev(image: String?) {
+    fun saveImageView(image: String?) {
         preference.edit().putString("image", image).apply()
     }
     fun isImageView(): String? {

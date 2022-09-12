@@ -10,10 +10,13 @@ import com.example.lovecalculate.Prefs
 import com.example.lovecalculate.R
 import com.example.lovecalculate.databinding.FragmentBoardBinding
 import com.example.lovecalculate.databinding.ItemBoardBinding
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class BoardFragment : Fragment() {
-
+@Inject
+private  lateinit var prefs: Prefs
     lateinit var binding: FragmentBoardBinding
 
     override fun onCreateView(
@@ -31,7 +34,7 @@ class BoardFragment : Fragment() {
         binding.dots.setViewPager2(binding.view)
         binding.dots.setViewPager2(binding.view)
         binding.tvNext.setOnClickListener {
-            Prefs(requireContext()).saveState()
+            prefs.saveState()
             findNavController().navigate(R.id.homeFragment)
         }
     }

@@ -8,8 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.lovecalculate.databinding.FragmentSecondBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class SecondFragment : Fragment() {
     private lateinit var binding: FragmentSecondBinding
     private lateinit var navController: NavController

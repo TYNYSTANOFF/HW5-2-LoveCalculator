@@ -9,19 +9,21 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import com.example.lovecalculate.Prefs
 import com.example.lovecalculate.R
 import com.example.lovecalculate.databinding.FragmentHomeBinding
 import com.example.lovecalculate.network.model.LoveModel
 import com.example.lovecalculate.ui.App
+import dagger.hilt.android.AndroidEntryPoint
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var navController: NavController
-
+    private lateinit var prefs: Prefs
 
 
     override fun onCreateView(
